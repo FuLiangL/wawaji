@@ -1,0 +1,23 @@
+{
+    "code": "1",
+    "data": [
+        { "nickname": "张一", "name": "礼物1", "price": "2.01" },
+        { "nickname": "张二", "name": "礼物2", "price": "2.02" },
+        { "nickname": "张三", "name": "礼物3", "price": "2.03" },
+        { "nickname": "张四", "name": "礼物4", "price": "2.04" },
+        { "nickname": "张五", "name": "礼物5", "price": "2.05" },
+        { "nickname": "张六", "name": "礼物6", "price": "2.06" },
+        { "nickname": "张七", "name": "礼物7", "price": "2.07" },
+        { "nickname": "张八", "name": "礼物8", "price": "2.08" },
+        { "nickname": "张九", "name": "礼物9", "price": "2.09" },
+        { "nickname": "李一", "name": "礼物1", "price": "2.01" },
+        { "nickname": "李二", "name": "礼物2", "price": "2.02" },
+        { "nickname": "李三", "name": "礼物3", "price": "2.03" },
+        { "nickname": "李四", "name": "礼物4", "price": "2.04" },
+        { "nickname": "李五", "name": "礼物5", "price": "2.05" },
+        { "nickname": "李六", "name": "礼物6", "price": "2.06" },
+        { "nickname": "李七", "name": "礼物7", "price": "2.07" },
+        { "nickname": "李八", "name": "礼物8", "price": "2.08" },
+        { "nickname": "李九", "name": "礼物9", "price": "2.09" }
+    ]
+}

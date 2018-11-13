@@ -1,0 +1,607 @@
+/* 设置统一的样式字体，点击不能出现阴影的效果 */
+html, body, .main{
+	width: 100%; height: 100%;
+	/* 解决HTML文件中长按选中文本内容 */
+	-webkit-user-select: none;
+    -webkit-touch-callout: none; 
+	-webkit-text-size-adjust: none; 
+	-webkit-highlight: none; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    font-size: 16px; font-family: '微软雅黑';
+    background-color: #b3211f;
+}
+body {
+    padding-top: constant(safe-area-inset-top);             
+    padding-left: constant(safe-area-inset-left);                 
+    padding-right: constant(safe-area-inset-right);                
+    padding-bottom: constant(safe-area-inset-bottom);
+}
+ul, li{
+    list-style: none; padding: 0; margin: 0;
+}
+
+/* 商品列表 */
+.productList{
+	display: none;
+	width: 100%; height: 100%;
+	position: fixed; left: 0; top: 0; z-index: 10;
+}
+.productList .productListBg{
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; 
+	background: rgba(0, 0, 0, 0.7);
+}
+.productList .productListBg .box{
+	width: 5.6rem; height: 6.5rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8354.png');
+	background-size: 5.6rem 6.5rem;
+	position: absolute; left: 50%; top: 25%;
+	margin-left: -2.8rem;
+}
+.productList .productListBg .box .head{
+	width: 4.59rem; height: 1.09rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-3706.png');
+	background-size: 4.59rem 1.09rem;
+	position: absolute; left: 0.5rem; top: -0.8rem;
+}
+.productList .productListBg .box .close{
+	width: 0.6rem; height: 0.6rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2940.png');
+	background-size: 0.6rem 0.6rem;
+	position: absolute; right: -0.5rem; top: -0.5rem;
+}
+.productList .productListBg .box .wrapper{
+	width: 4.8rem; height: 5.8rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 0.6rem;
+}
+.productList .productListBg .box .content{
+	width: 4.8rem;
+}
+.productList .productListBg .box .content li:nth-of-type(1){
+	border-top: 0.01rem solid #e4e5e7;	
+}
+.productList .productListBg .box .content li{
+	width: 4.8rem; height: 1.2rem;
+	border-bottom: 0.01rem solid #e4e5e7;
+	box-sizing: border-box;
+}
+.productList .productListBg .box .content li .icon{
+	width: 0.8rem; height: 0.8rem;
+	margin-top: 0.2rem; float: left;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2066.png');
+	background-size: 0.8rem 0.8rem;
+}
+.productList .productListBg .box .content li .instr{
+	width: 2rem; height: 1.2rem;
+	float: left; line-height: 1.2rem;
+	font-size: 0.3rem; color: #333;
+}
+.productList .productListBg .box .content li .price{
+	width: 1.9rem; height: 1.2rem;
+	float: left;
+	font-size: 0.3rem; color: #333;
+	text-align: right; line-height: 1.2rem;
+}
+.productList .productListBg .box .content li .price p:nth-of-type(1){
+	margin-top: 0.3rem;
+	width: 1.9rem; height: 0.35rem;
+	text-align: center; line-height: 0.35rem;
+	font-size: 0.3rem; color: #333;
+}
+.productList .productListBg .box .content li .price p:nth-of-type(2){
+	width: 1.9rem; height: 0.3rem;
+	text-align: center; line-height: 0.3rem;
+	font-size: 0.2rem; color: #999;
+}
+/* 排行榜的名单 */
+.rankList{
+	display: none;
+	width: 100%; height: 100%;
+	position: fixed; left: 0; top: 0; z-index: 10;
+}
+.rankList .rankListBg{
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; 
+	background: rgba(0, 0, 0, 0.7);
+}
+.rankList .rankListBg .box{
+	width: 5.6rem; height: 6.5rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8354.png');
+	background-size: 5.6rem 6.5rem;
+	position: absolute; left: 50%; top: 25%;
+	margin-left: -2.8rem;
+}
+.rankList .rankListBg .box .head{
+	width: 4.59rem; height: 1.09rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-6977.png');
+	background-size: 4.59rem 1.09rem;
+	position: absolute; left: 0.5rem; top: -0.8rem;
+}
+.rankList .rankListBg .box .close{
+	width: 0.6rem; height: 0.6rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2940.png');
+	background-size: 0.6rem 0.6rem;
+	position: absolute; right: -0.5rem; top: -0.5rem;
+}
+.rankList .rankListBg .box .btns{
+	width: 4.86rem; height: 0.6rem;
+	position: absolute; left: 0.38rem; top: 0.6rem;
+	font-size: 0.26rem;
+}
+.rankList .rankListBg .box .btns span{
+	display: block; float: left;
+	width: 1.6rem; height: 0.6rem;
+	text-align: center; line-height: 0.6rem;
+	background-color: #fcf3da; color: #ca9506;
+}
+.rankList .rankListBg .box .btns span.active{
+	background-color: #f1c347; color: #fff;
+}
+.rankList .rankListBg .box .btns span:nth-of-type(1){
+	border-top-left-radius: 0.1rem;
+	border-bottom-left-radius: 0.1rem;
+}
+.rankList .rankListBg .box .btns span:nth-of-type(2){
+	border-left: 0.02rem solid #fff;
+	border-right: 0.02rem solid #fff;
+}
+.rankList .rankListBg .box .btns span:nth-of-type(3){
+	border-top-right-radius: 0.1rem;
+	border-bottom-right-radius: 0.1rem;
+}
+/* 控制相应的位置的显示隐藏 */
+.rankList .rankListBg .box .wrapperOne{
+	display: block;
+	width: 4.8rem; height: 5.1rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 1.35rem;
+}
+.rankList .rankListBg .box .wrapperTwo{
+	display: none;
+	width: 4.8rem; height: 5.1rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 1.35rem;
+}
+.rankList .rankListBg .box .wrapperThree{
+	display: none;
+	width: 4.8rem; height: 5.1rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 1.35rem;
+}
+.rankList .rankListBg .box .content{
+	width: 4.8rem;
+}
+.rankList .rankListBg .box .content li{
+	width: 4.8rem; height: 0.8rem;
+	padding-top: 0.15rem; padding-bottom: 0.15rem;
+}
+.rankList .rankListBg .box .content li div{
+	float: left;
+}
+.rankList .rankListBg .box .content li .icon{
+	width: 0.8rem; height: 0.8rem;
+	border-radius: 50%; float: left;
+}
+.rankList .rankListBg .box .content li .numbel{
+	width: 1.5rem; height: 0.8rem; padding-left: 0.2rem;
+	line-height: 0.8rem;
+	font-size: 0.28rem; color: #333; font-family: '微软雅黑';
+	border-radius: 50%;
+	/* 单行进行省略号隐藏 */
+	overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.rankList .rankListBg .box .content li .count{
+	width: 1rem; height: 0.8rem;
+	text-align: center; line-height: 0.8rem;
+	font-size: 0.24rem; color: #999;
+}
+.rankList .rankListBg .box .content li .money{
+	width: 1.3rem; height: 0.8rem;
+	text-align: center; line-height: 0.8rem;
+	font-size: 0.28rem; color: #333;
+}
+.rankList .rankListBg .box .content li .money p:nth-of-type(1){
+	margin-top: 0.15rem;
+	width: 1.3rem; height: 0.3rem; 
+	text-align: center; line-height: 0.3rem;
+	font-size: 0.28rem; color: #333;
+}
+.rankList .rankListBg .box .content li .money p:nth-of-type(2){
+	width: 1.3rem; height: 0.3rem; 
+	text-align: center; line-height: 0.25rem;
+	font-size: 0.2rem; color: #999;
+}
+.rankList .rankListBg .box .content li .gift_icon{
+	width: 0.8rem; height: 0.8rem;
+	text-align: center; line-height: 0.8rem;
+	font-size: 0.28rem; color: #333;
+	float: left;
+}
+/* 中奖纪录的弹窗 */
+.winningRecord{
+	display: none;
+	width: 100%; height: 100%;
+	position: fixed; left: 0; top: 0; z-index: 10;
+}
+.winningRecord .winningRecordBg{
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; 
+	background: rgba(0, 0, 0, 0.7);
+}
+.winningRecord .winningRecordBg .box{
+	width: 5.6rem; height: 6.5rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8354.png');
+	background-size: 5.6rem 6.5rem;
+	position: absolute; left: 50%; top: 25%;
+	margin-left: -2.8rem;
+}
+.winningRecord .winningRecordBg .box .head{
+	width: 4.59rem; height: 1.09rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8018.png');
+	background-size: 4.59rem 1.09rem;
+	position: absolute; left: 0.5rem; top: -0.8rem;
+}
+.winningRecord .winningRecordBg .box .close{
+	width: 0.6rem; height: 0.6rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2940.png');
+	background-size: 0.6rem 0.6rem;
+	position: absolute; right: -0.5rem; top: -0.5rem;
+}
+.winningRecord .winningRecordBg .box .wrapper{
+	width: 4.8rem; height: 5.8rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 0.6rem;
+}
+.winningRecord .winningRecordBg .box .content{
+	width: 4.8rem;
+}
+.winningRecord .winningRecordBg .box .content li:nth-of-type(1){
+	border-top: 0.01rem solid #e4e5e7;
+}
+.winningRecord .winningRecordBg .box .content li{
+	width: 4.8rem; height: 1.2rem;
+	border-bottom: 0.01rem solid #e4e5e7;
+	box-sizing: border-box;
+}
+.winningRecord .winningRecordBg .box .content li .icon{
+	width: 0.8rem; height: 0.8rem;
+	margin-top: 0.2rem; float: left;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2066.png');
+	background-size: 0.8rem 0.8rem;
+}
+.winningRecord .winningRecordBg .box .content li .instr{
+	width: 2.6rem; height: 1.2rem;
+	float: left; margin-left: 0.1rem;
+	font-size: 0.24rem; color: #999;
+}
+.winningRecord .winningRecordBg .box .content li .instr p:nth-of-type(1){
+	font-size: 0.3rem; color: #333;
+	margin-top: 0.3rem;
+	height: 0.3rem; line-height: 0.3rem;
+	overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.winningRecord .winningRecordBg .box .content li .instr p:nth-of-type(2){
+	margin-top: 0.16rem;
+	height: 0.24rem; line-height: 0.24rem;
+}
+.winningRecord .winningRecordBg .box .content li .price{
+	width: 1.3rem; height: 1.2rem;
+	float: left;
+	font-size: 0.3rem; color: #333;
+	text-align: center; line-height: 1.2rem;
+}
+.winningRecord .winningRecordBg .box .content li .price p:nth-of-type(1){
+	margin-top: 0.3rem;
+	width: 1.3rem; height: 0.35rem;
+	text-align: center; line-height: 0.35rem;
+	font-size: 0.3rem; color: #333;
+}
+.winningRecord .winningRecordBg .box .content li .price p:nth-of-type(2){
+	width: 1.3rem; height: 0.25rem;
+	text-align: center; line-height: 0.25rem;
+	font-size: 0.2rem; color: #999;
+}
+/* 规则说明的弹窗 */
+.ruleActivity{
+	display: none;
+	width: 100%; height: 100%;
+	position: fixed; left: 0; top: 0; z-index: 10;
+}
+.ruleActivity .ruleActivityBg{
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; 
+	background: rgba(0, 0, 0, 0.7);
+}
+.ruleActivity .ruleActivityBg .box{
+	width: 5.6rem; height: 6.5rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8354.png');
+	background-size: 5.6rem 6.5rem;
+	position: absolute; left: 50%; top: 25%;
+	margin-left: -2.8rem;
+}
+.ruleActivity .ruleActivityBg .box .head{
+	width: 4.59rem; height: 1.09rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-25-2683.png');
+	background-size: 4.59rem 1.09rem;
+	position: absolute; left: 0.5rem; top: -0.8rem;
+}
+.ruleActivity .ruleActivityBg .box .close{
+	width: 0.6rem; height: 0.6rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2940.png');
+	background-size: 0.6rem 0.6rem;
+	position: absolute; right: -0.5rem; top: -0.5rem;
+}
+.ruleActivity .ruleActivityBg .box .wrapper{
+	width: 4.8rem; height: 5.8rem; overflow: hidden;
+	position: absolute; left: 0.4rem; top: 0.6rem;
+}
+.ruleActivity .ruleActivityBg .box .content{
+	width: 4.8rem;
+}
+.ruleActivity .ruleActivityBg .box .content li{
+	font-size: 0.26rem; color: #333;
+	/* li必须要搞高度 */
+	width: 4.8rem; overflow: hidden;
+}
+.ruleActivity .ruleActivityBg .box .content li span{
+	width: 0.4rem; height: 0.36rem;
+	text-align: center; line-height: 0.36rem;
+	float: left; font-size: 0.28rem; color: #ff322a;
+}
+.ruleActivity .ruleActivityBg .box .content li p{
+	width: 4.4rem;
+	line-height: 0.36rem; float: left;
+}
+/* 获得礼物的弹窗 */
+.getGIft{
+	display: none;
+	width: 100%; height: 100%;
+	position: fixed; left: 0; top: 0; z-index: 10;
+}
+.getGIft .getGIftBg{
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0; 
+	background: rgba(0, 0, 0, 0.7);
+}
+.getGIft .getGIftBg .box{
+	width: 5.6rem; height: 5rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2215.png');
+	background-size: 5.6rem 5rem;
+	position: absolute; left: 50%; top: 30%;
+	margin-left: -2.8rem;
+}
+.getGIft .getGIftBg .box .head{
+	width: 4.59rem; height: 1.09rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-1192.png');
+	background-size: 4.59rem 1.09rem;
+	position: absolute; left: 0.5rem; top: -0.8rem;
+}
+.getGIft .getGIftBg .box .giftIcon{
+	width: 2.4rem; height: 2.4rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-2066.png');
+	background-size: 2.4rem 2.4rem;
+	position: absolute; left: 1.6rem; top: 0.6rem;
+}
+.getGIft .getGIftBg .box .info{
+	width: 5.6rem; height: 0.3rem;
+	text-align: center; line-height: 0.3rem;
+	font-size: 0.26rem; color: #ca9506; font-family: '微软雅黑';
+	position: absolute; left: 0; top: 3.2rem;
+}
+.getGIft .getGIftBg .box .sure{
+	width: 3.7rem; height: 0.85rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-1234.png');
+	background-size: 3.7rem 0.85rem;
+	position: absolute; left: 0.95rem; bottom: 0.4rem;
+}
+/* main的设置样式 */
+.main{
+	width: 7.5rem; height: 12.06rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-27-8820.png');
+	background-size: 7.5rem 12.06rem;
+	position: relative;
+}
+.main .ruleBtn{
+	width: 0.82rem; height: 0.85rem;
+	position: absolute; left: 0.2rem; top: 0.26rem;
+}
+.main .rankListBtn{
+	width: 1.14rem; height: 1.04rem;
+	position: absolute; right: 0.2rem; top: 0.16rem;
+}
+.main .container{
+	width: 5rem; height: 0.24rem;
+	text-align: center; line-height: 0.24rem;
+    margin-left: -2.5rem;
+	position: absolute; top: 1.6rem; left: 50%;
+	overflow: hidden;
+}
+.main .container .item{
+    position: absolute; left: 0;
+    width: 100%; height:  0.24rem;
+    line-height: 0.24rem; text-align: center;
+    font-size: 0.24rem; font-family: '微软雅黑'; color: #fff;
+    overflow: hidden;
+}
+.main .container .item font{ text-align: center; }
+.main .container .item font:nth-of-type(1){
+	width: 0.5rem; height: 0.24rem;
+	float: left; margin-left: 0.1rem;
+}
+.main .container .item font:nth-of-type(2){
+	width: 1rem;
+	/* 单行超出隐藏 */
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+	height: 0.24rem; color: #ffea00; float: left; 
+}
+.main .container .item font:nth-of-type(3){
+	width: 0.5rem; height: 0.24rem;
+	float: left;
+}
+.main .container .item font:nth-of-type(4){
+	width: 0.8rem;	
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;	
+	height: 0.24rem; color: #ffea00; float: left;
+}
+.main .container .item font:nth-of-type(5),
+.main .container .item font:nth-of-type(6),
+.main .container .item font:nth-of-type(7){
+	float: left;
+}
+.main .container .item font:nth-of-type(6){
+	color: #ffea00;
+}
+.main .moreSoming{
+	width: 1.43rem; height: 0.42rem;
+	position: absolute; right: 0.5rem; top: 2.6rem;
+}
+.main .timeDown{
+	width: 3.9rem; height: 0.2rem;
+	position: absolute; left: 0.82rem; top: 2.75rem;
+	background-color: #2ADE2F; border-radius: 0.1rem;
+}
+.main .clawArea{
+	width: 6.52rem; height: 5.35rem; overflow: hidden;
+	position: absolute; left: 0.49rem; top: 3.36rem;
+}
+.main .clawBox{
+	width: 0.87rem; height: 2.05rem;
+	position: absolute; left: 0.33rem; top: 0;
+	transform-origin: 50% 0 0;
+}
+.main .clawBox .rope{
+	width: 0.07rem; height: 1rem;
+	background-color: #FF5F5F;
+	position: absolute; top: 0; left: 0.4rem;
+}
+.main .clawBox .getGift{
+	/* 抓取上来的礼物 */
+	display: none;
+	width: 3rem; height: 3rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-26-6129.png');
+	background-size: 3rem 3rem; 
+	position: absolute; left: 50%; bottom: -1.5rem;
+	margin-left: -1.5rem;
+}
+.main .clawBox .grab{
+	width: 0.87rem; height: 1.05rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-27-9186.png');
+	background-size: 0.87rem 1.05rem;
+	position: absolute; left: 0; bottom: 0;
+}
+.main .gifts{
+	width: 6.52rem; height: 3.11rem;
+	position: absolute; left: 0.5rem; top: 5.6rem;
+}
+.main .gifts .drink{
+	display: block;
+	width: 6.52rem; height: 3.11rem;
+	background-image: url('http://dianliaotools.oss-cn-shenzhen.aliyuncs.com/test/test-2018-03-07-2880.png');
+	background-size: 6.52rem 3.11rem;
+	position: absolute; left: 0; top: 0;
+}
+.main .gifts .public{
+	display: none;
+	width: 6.52rem; height: 3.11rem;
+	background-image: url('http://dianliaotools.oss-cn-shenzhen.aliyuncs.com/test/test-2018-03-07-8075.png');
+	background-size: 6.52rem 3.11rem;
+	position: absolute; left: 0; top: 0;
+}
+.main>.btns{
+	width: 7.5rem; height: 1.72rem;
+	position: absolute; left: 0; top: 9.44rem;
+}
+.main>.btns .collect{
+	width: 1.6rem; height: 1.72rem;
+	position: absolute; left: 0.5rem; top: 0;
+}
+.main>.btns .collect .btn{
+	width: 0.93rem; height: 1rem;
+	background-image: url('http://dianliaotools.oss-cn-shenzhen.aliyuncs.com/test/test-2018-04-23-9549.png');
+	background-size: 0.93rem 1rem;
+	position: absolute; left: 0.34rem; top: 0;
+}
+.main>.btns .collect .btn.active{
+	background-image: url('http://dianliaotools.oss-cn-shenzhen.aliyuncs.com/test/test-2018-04-23-8517.png');	
+}
+.main>.btns .collect div:nth-of-type(2){
+	width: 1.6rem; height: 0.24rem;
+	text-align: center; line-height: 0.24rem;
+	font-size: 0.24rem; color: #f7e949; font-family: '微软雅黑';
+	position: absolute; left: 0; top: 1.14rem;
+}
+.main>.btns .star{
+	width: 3.11rem; height: 1.72rem;
+	position: absolute; left: 50%; top: 0;
+	margin-left: -1.55rem;
+}
+/* 设置为不同的样式展示starBtn、darwBtn、stopBtn */
+.main>.btns .star .starBtn{
+	display: block;
+	width: 3.11rem; height: 0.98rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-6609.png');
+	background-size: 3.11rem 0.98rem;
+	position: absolute; left: 0; top: 0;
+}
+.main>.btns .star .starBtn.active{
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-8376.png');	
+}
+.main>.btns .star .darwBtn{
+	display: none;
+	width: 3.11rem; height: 0.98rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-25-7168.png');
+	background-size: 3.11rem 0.98rem;
+	position: absolute; left: 0; top: 0;
+}
+.main>.btns .star .darwBtn.active{
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-25-5301.png');	
+}
+.main>.btns .star .stopBtn{
+	display: none;
+	width: 3.11rem; height: 0.98rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-25-5289.png');
+	background-size: 3.11rem 0.98rem;
+	position: absolute; left: 0; top: 0;
+}
+.main>.btns .star .record{
+	width: 6.11rem; height: 0.34rem; 
+	text-align: center; line-height: 0.34rem;
+	font-family: '微软雅黑'; font-size: 0.24rem; color: #fff;
+	position: absolute; left: -1.5rem; bottom: 0;
+}
+.main>.btns .star .record span{
+	color: #ffea00;
+}
+.main>.btns .buy{
+	width: 1.6rem; height: 1.72rem;
+	position: absolute; right: 0.5rem; top: 0;
+}
+.main>.btns .buy .btn{
+	width: 0.93rem; height: 1rem;
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-7201.png');
+	background-size: 0.93rem 1rem;
+	position: absolute; left: 0.34rem; top: 0;
+}
+.main>.btns .buy .btn.active{
+	background-image: url('http://dianliao.oss-cn-shenzhen.aliyuncs.com/test/test-2018-01-24-3383.png');	
+}
+.main>.btns .buy div:nth-of-type(2){
+	width: 1.6rem; height: 0.24rem;
+	text-align: center; line-height: 0.24rem;
+	font-size: 0.24rem; color: #fff; font-family: '微软雅黑';
+	position: absolute; left: 0; top: 1.14rem;
+}
+.main>.btns .buy div:nth-of-type(2) span{
+	color: #f7e949;
+}
+
+/* 需要给弹窗设置为弹出的样式，进行了添加tanchuscale */
+/* 控制弹出窗的动画，开始缩放为0，一直慢慢放大 */
+@keyframes tanchuscale{
+	from{ transform: scale(0); -webkit-transform: scale(0); }
+	to{ transform: scale(1); -webkit-transform: scale(1);}
+}
+@-webkit-keyframes tanchuscale{
+	from{ transform: scale(0); -webkit-transform: scale(0); }
+	to{ transform: scale(1); -webkit-transform: scale(1);}
+}
+.tanchuscale{
+	-webkit-animation:tanchuscale 0.5s;
+    animation: tanchuscale 0.5s;
+}
